@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WalmartAssessment</string>
+    <string name="title_activity_countries">CountriesActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="country_region">Country, Region</string>
+    <string name="country_code">Code</string>
+    <string name="country_capital">Capital</string>
+</resources>
