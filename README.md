@@ -9,9 +9,7 @@ Region
 Code
 Capital
 
-Orientation-aware layout:
-Portrait → Linear layout
-Landscape → Grid layout
+Adaptive layout that adjusts automatically based on screen orientation
 
 Live search:
 Filter countries by name, capital, region, or code
