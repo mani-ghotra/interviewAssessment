@@ -1,42 +1,32 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <!-- Static Header -->
-    <LinearLayout
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="12dp"
-        android:background="@android:color/darker_gray">
+        android:layout_margin="8dp"
+        card_view:cardCornerRadius="12dp"
+        card_view:cardElevation="4dp">
 
-        <TextView
-            android:layout_width="0dp"
+        <EditText
+            android:padding="5dp"
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/country_region"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            android:textSize="14sp" />
+            android:autofillHints=""
+            android:background="@color/white"
+            android:hint="Search"
+            android:maxLines="1"
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp"
+            android:textColor="@color/black" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/country_code"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            android:layout_marginEnd="24dp"
-            android:textSize="14sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/country_capital"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            android:textSize="14sp" />
-    </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
     <!-- Loader -->
     <ProgressBar
@@ -48,12 +38,22 @@
         android:visibility="gone"
         android:layout_marginTop="24dp"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="No countries available"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/black"
+        android:id="@+id/emptyListText"/>
+
     <!-- RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/countryRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
         android:clipToPadding="false"
         android:padding="8dp"
         android:visibility="visible" />

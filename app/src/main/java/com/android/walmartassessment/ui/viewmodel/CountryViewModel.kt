@@ -18,6 +18,10 @@ class CountryViewModel(
     private val _error = MutableLiveData<String?>()
     val error: LiveData<String?> = _error
 
+    init {
+        loadCountries()
+    }
+
     fun loadCountries() {
         viewModelScope.launch {
             val result = repository.fetchCountries()
